@@ -24,13 +24,14 @@
             margin: 0;
         }
         main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-            flex: 1; /* Маҳдуд мекунад, ки main фазои боқимондаро гирад */
+            max-width: 1000px; /* паҳноии main дар экран */
+			width: 90%;        /* паҳноии нисбӣ */
+			margin: 40px auto;
+			padding: 20px;
+			background: rgba(255,255,255,0.1);
+			border-radius: 15px;
+			box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+			flex: 1;
         }
         main h2 {
             color: #ffd700;
@@ -64,12 +65,20 @@
         footer a:hover {
             text-decoration: underline;
         }
+		.apps-container {
+			display: flex;
+			flex-wrap: wrap;      /* барои гузоштани card-ҳо дар чанд сутун */
+			gap: 20px;
+			justify-content: center;
+		}
 		.app-card {
 			background: rgba(255,255,255,0.15);
 			padding: 20px;
-			margin-bottom: 20px;
 			border-radius: 15px;
 			box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+			flex: 1 1 45%;      /* card ҳадди ақал 45% паҳноӣ мегирад */
+			box-sizing: border-box;
+			min-width: 300px;   /* паҳноии ҳадди ақали card */
 		}
 		.app-card h3 {
 			margin-top: 0;
@@ -81,22 +90,23 @@
     <header>
         <h1>Vashgird App</h1>
     </header>
-    <main>
+	<main>
 		<h2>Барномаҳои ман</h2>
-
-		<!-- Card барои барномаи Мучал -->
-		<div class="app-card">
-			<h3>Мучал</h3>
-			<p>
-				Аз замонҳои қадим дар байни халқҳои Осиё ва Шарқи Наздик як системаи солшуморӣ вуҷуд дорад, ки дар он ба ҳар сол номи як ҳайвон дода мешавад. Солҳо ба номи муш, бақар, паланг, харгӯш, наҳанг, мор, асп, гӯсфанд, ҳамдуна, мурғ, саг ва хук номгузорӣ шудаанд. Як даври ин тақвим аз 12 сол иборат аст.
-			</p>
-			<p>
-				Барномаи «Мучал» барои муайян кардани мучал пешбинӣ шудааст. Барои ин, ба корбар лозим аст, ки дар равзанаи «Соли таваллуд» соли заруриро ворид кунад ва тугмаро дар тарафи рости майдон пахш кунад. Дар натиҷа тасвири мучали мувофиқ нишон дода мешавад.
-			</p>
-			<a href="https://play.google.com/store/apps/details?id=com.akmaljon.muchal" class="button" target="_blank">Дидани барномаи "Мучал"</a>
-			<a href="mailto:sulaimonzodaa@gmail.com" class="button">Фикру мулоҳиза фиристодан</a>
+	
+		<div class="apps-container">
+			<!-- Card барои барномаи Мучал -->
+			<div class="app-card">
+				<h3>Мучал</h3>
+				<p>
+					Аз замонҳои қадим дар байни халқҳои Осиё ва Шарқи Наздик як системаи солшуморӣ вуҷуд дорад, ки дар он ба ҳар сол номи як ҳайвон дода мешавад. Солҳо ба номи муш, бақар, паланг, харгӯш, наҳанг, мор, асп, гӯсфанд, ҳамдуна, мурғ, саг ва хук номгузорӣ шудаанд. Як даври ин тақвим аз 12 сол иборат аст.
+				</p>
+				<p>
+					Барномаи «Мучал» барои муайян кардани мучал пешбинӣ шудааст. Барои ин, ба корбар лозим аст, ки дар равзанаи «Соли таваллуд» соли заруриро ворид кунад ва тугмаро дар тарафи рости майдон пахш кунад. Дар натиҷа тасвири мучали мувофиқ нишон дода мешавад.
+				</p>
+				<a href="https://play.google.com/store/apps/details?id=com.akmaljon.muchal" class="button" target="_blank">Дидани барнома</a>
+				<a href="mailto:sulaimonzodaa@gmail.com" class="button">Тамос бо мо</a>
+			</div>
 		</div>
-
 	</main>
     <footer>
         &copy; 2025 VashgirdApp. Ҳамаи ҳуқуқҳо ҳифз шудаанд.
