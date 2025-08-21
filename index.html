@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vashgird App</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            flex: 1; /* Маҳдуд мекунад, ки main фазои боқимондаро гирад */
+        }
+        main h2 {
+            color: #ffd700;
+        }
+        main p {
+            line-height: 1.6;
+        }
+        a.button {
+            display: inline-block;
+            margin: 15px 10px 0 0;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        a.button:hover {
+            background-color: #ffbf00;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+		.app-card {
+			background: rgba(255,255,255,0.15);
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 15px;
+			box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+		}
+		.app-card h3 {
+			margin-top: 0;
+			color: #ffd700;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vashgird App</h1>
+    </header>
+    <main>
+		<h2>Барномаҳои ман</h2>
+
+		<!-- Card барои барномаи Мучал -->
+		<div class="app-card">
+			<h3>Мучал</h3>
+			<p>
+				Аз замонҳои қадим дар байни халқҳои Осиё ва Шарқи Наздик як системаи солшуморӣ вуҷуд дорад, ки дар он ба ҳар сол номи як ҳайвон дода мешавад. Солҳо ба номи муш, бақар, паланг, харгӯш, наҳанг, мор, асп, гӯсфанд, ҳамдуна, мурғ, саг ва хук номгузорӣ шудаанд. Як даври ин тақвим аз 12 сол иборат аст.
+			</p>
+			<p>
+				Барномаи «Мучал» барои муайян кардани мучал пешбинӣ шудааст. Барои ин, ба корбар лозим аст, ки дар равзанаи «Соли таваллуд» соли заруриро ворид кунад ва тугмаро дар тарафи рости майдон пахш кунад. Дар натиҷа тасвири мучали мувофиқ нишон дода мешавад.
+			</p>
+			<a href="https://play.google.com/store/apps/details?id=com.akmaljon.muchal" class="button" target="_blank">Дидани барномаи "Мучал"</a>
+			<a href="mailto:sulaimonzodaa@gmail.com" class="button">Фикру мулоҳиза фиристодан</a>
+		</div>
+
+	</main>
+    <footer>
+        &copy; 2025 VashgirdApp. Ҳамаи ҳуқуқҳо ҳифз шудаанд.
+    </footer>
+</body>
+</html>
