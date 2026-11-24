@@ -18,8 +18,7 @@
         "tg": "Барнома дар асоси шоҳасари ҳаким Абулқосими Фирдавсӣ: достонҳо, бозиҳо, пурсишномаҳо, вожанома, ёддоштҳо, расмҳо ва номҳои Шоҳнома.",
         "ru": "Приложение по шедевру Абулкасима Фирдоуси: сказания, игры, викторины, словарь, заметки, иллюстрации и имена героев Шахнаме.",
         "en": "Based on the masterpiece of Abolqasem Ferdowsi: stories, games, quizzes, a glossary, notes, illustrations and the names of the Shahnameh."
-      },
-      "privacy": "shohnoma/privacy.html"
+      }
     },
     {
       "package": "com.akmaljon.diffspot",
