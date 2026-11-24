@@ -1,16 +1,6 @@
 {
   "apps": [
     {
-      "package": "com.akmaljon.muchal",
-      "name": { "tg": "Мучал", "ru": "Мучал", "en": "Muchal" },
-      "icon": "icons/muchal.webp",
-      "description": {
-        "tg": "Мучали худро аз рӯи соли таваллуд муайян кунед. Бозиҳои шавқовар барои кӯдакон: овози ҳайвонҳо, мувофиқат, пайвастан ва албом.",
-        "ru": "Узнайте свой мучал по году рождения. Весёлые игры для детей: голоса животных, соответствие, соединение и альбом.",
-        "en": "Find your zodiac animal by year of birth. Fun games for kids: animal sounds, matching, connecting and an album."
-      }
-    },
-    {
       "package": "com.shohnoma.app",
       "name": { "tg": "Шоҳнома", "ru": "Шахнаме", "en": "Shahnameh" },
       "icon": "icons/shohnoma.webp",
@@ -20,6 +10,16 @@
         "en": "Based on the masterpiece of Abolqasem Ferdowsi: stories, games, quizzes, a glossary, notes, illustrations and the names of the Shahnameh."
       }
     },
+    {
+      "package": "com.akmaljon.muchal",
+      "name": { "tg": "Мучал", "ru": "Мучал", "en": "Muchal" },
+      "icon": "icons/muchal.webp",
+      "description": {
+        "tg": "Мучали худро аз рӯи соли таваллуд муайян кунед. Бозиҳои шавқовар барои кӯдакон: овози ҳайвонҳо, мувофиқат, пайвастан ва албом.",
+        "ru": "Узнайте свой мучал по году рождения. Весёлые игры для детей: голоса животных, соответствие, соединение и альбом.",
+        "en": "Find your zodiac animal by year of birth. Fun games for kids: animal sounds, matching, connecting and an album."
+      }
+    },    
     {
       "package": "com.akmaljon.diffspot",
       "name": { "tg": "DiffSpot", "ru": "DiffSpot", "en": "DiffSpot" },
