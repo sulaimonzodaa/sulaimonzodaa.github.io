@@ -1,125 +1,163 @@
 <!DOCTYPE html>
 <html lang="tg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vashgird App</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: rgba(0,0,0,0.3);
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        main {
-            max-width: 1000px; /* паҳноии main дар экран */
-			width: 90%;        /* паҳноии нисбӣ */
-			margin: 40px auto;
-			padding: 20px;
-			background: rgba(255,255,255,0.1);
-			border-radius: 15px;
-			box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-			flex: 1;
-        }
-        main h2 {
-            color: #ffd700;
-        }
-        main p {
-            line-height: 1.6;
-        }
-        a.button {
-            display: inline-block;
-            margin: 15px 10px 0 0;
-            padding: 10px 20px;
-            background-color: #ffd700;
-            color: #000;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        a.button:hover {
-            background-color: #ffbf00;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0,0,0,0.2);
-        }
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-		.apps-container {
-			display: flex;
-			flex-wrap: wrap;      /* барои гузоштани card-ҳо дар чанд сутун */
-			gap: 20px;
-			justify-content: center;
-		}
-		.app-card {
-			background: rgba(255,255,255,0.15);
-			padding: 20px;
-			border-radius: 15px;
-			box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-			flex: 1 1 45%;      /* card ҳадди ақал 45% паҳноӣ мегирад */
-			box-sizing: border-box;
-			min-width: 300px;   /* паҳноии ҳадди ақали card */
-		}
-		.app-card h3 {
-			margin-top: 0;
-			color: #ffd700;
-		}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vashgird App</title>
+<meta name="description" content="Vashgird App — барномаҳо ва бозиҳои мобилӣ: Мучал, Шоҳнома, DiffSpot, Пазл.">
+<style>
+  :root {
+    --bg1: #2E1F5E; --bg2: #1B1438; --card: #3A2E6B; --card2: #44377A;
+    --text: #FFFFFF; --muted: #C9BFEA; --gold: #FFC233; --orange: #FF7A1A; --pink: #FF4D8D; --purple: #7B5CFF;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh; display: flex; flex-direction: column;
+    font-family: 'Segoe UI', Roboto, Tahoma, sans-serif; color: var(--text);
+    background: linear-gradient(180deg, var(--bg1), var(--bg2)) fixed;
+  }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 28px 0 8px; }
+  .hero {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 22px 24px; border-radius: 28px;
+    background: linear-gradient(120deg, var(--orange), var(--pink), var(--purple));
+    box-shadow: 0 12px 32px rgba(123, 92, 255, .35);
+  }
+  .hero h1 { margin: 0; font-size: clamp(28px, 6vw, 44px); font-weight: 800; letter-spacing: .5px; }
+  .hero p { margin: 4px 0 0; color: rgba(255,255,255,.92); font-size: 16px; }
+  .hero .grow { flex: 1 1 260px; }
+  .langs { display: flex; gap: 6px; }
+  .langs button {
+    border: 0; cursor: pointer; font: inherit; font-weight: 700; color: #fff;
+    padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.22);
+  }
+  .langs button.on { background: #fff; color: var(--pink); }
+
+  main { flex: 1; padding: 24px 0 40px; }
+  h2 { margin: 8px 4px 16px; font-size: 22px; font-weight: 800; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+  .card {
+    display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 24px;
+    background: var(--card); box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .icon { width: 84px; height: 84px; border-radius: 20px; flex: none; object-fit: cover; box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+  .top h3 { margin: 0; font-size: 22px; font-weight: 800; }
+  .badge {
+    display: inline-block; margin-top: 6px; padding: 3px 10px; border-radius: 999px;
+    font-size: 13px; font-weight: 700; background: rgba(255,194,51,.2); color: var(--gold);
+  }
+  .card p { margin: 0; color: var(--muted); line-height: 1.55; flex: 1; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px;
+    text-decoration: none; font-weight: 800; font-size: 15px; white-space: nowrap;
+  }
+  .btn.main { background: linear-gradient(90deg, var(--orange), var(--pink)); color: #fff; }
+  .btn.ghost { background: var(--card2); color: #fff; }
+  .btn.off { opacity: .55; pointer-events: none; }
+
+  .contact {
+    margin-top: 28px; padding: 20px 24px; border-radius: 24px; background: var(--card);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .contact b { font-size: 18px; }
+  footer { padding: 18px 0 26px; color: var(--muted); text-align: center; font-size: 14px; }
+</style>
 </head>
 <body>
-    <header>
+<header>
+  <div class="wrap">
+    <div class="hero">
+      <div class="grow">
         <h1>Vashgird App</h1>
-    </header>
-	<main>
-		<h2>Барномаҳои мо</h2>
-	
-		<div class="apps-container">
-			<!-- Card барои барномаи Мучал -->
-			<div class="app-card">
-				<h3>Мучал</h3>
-				<p>
-					Аз замонҳои қадим дар байни халқҳои Осиё ва Шарқи Наздик як системаи солшуморӣ вуҷуд дорад, ки дар он ба ҳар сол номи як ҳайвон дода мешавад. Солҳо ба номи муш, бақар, паланг, харгӯш, наҳанг, мор, асп, гӯсфанд, ҳамдуна, мурғ, саг ва хук номгузорӣ шудаанд. Як даври ин тақвим аз 12 сол иборат аст.
-				</p>
-				<p>
-					Барномаи «Мучал» барои муайян кардани мучал пешбинӣ шудааст. Барои ин, ба корбар лозим аст, ки дар равзанаи «Соли таваллуд» соли заруриро ворид кунад ва тугмаро дар тарафи рости майдон пахш кунад. Дар натиҷа тасвири мучали мувофиқ нишон дода мешавад.
-				</p>
-				<a href="https://play.google.com/store/apps/details?id=com.akmaljon.muchal" class="button" target="_blank">Дидани барнома</a>
-				<a href="mailto:vashgirdapp@gmail.com" class="button">Тамос бо мо</a>
-			</div>
+        <p data-t="tagline">Барномаҳо ва бозиҳои мобилӣ барои тамоми оила</p>
+      </div>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="tg">TG</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-			<!-- Card барои барномаи Шоҳнома -->
-			<div class="app-card">
-				<h3>Шоҳнома</h3>
-				<p>
-					Барномаи «Шоҳнома» дар асоси шоҳасари ҳаким Абулқосими Фирдавсӣ сохта шудааст. Он аз достонҳо, бозиҳо, пурсишномаҳо, вожанома, ёддоштҳо, расмҳо, рӯйхати номҳои дар Шоҳнома зикршуда ва дигар бахшҳои шавқовар иборат аст.
-				</p>
-				<a href="https://play.google.com/store/apps/details?id=com.shohnoma.app" class="button" target="_blank">Дидани барнома</a>
-				<a href="mailto:vashgirdapp@gmail.com" class="button">Тамос бо мо</a>
-			</div>
-		</div>
-	</main>
-    <footer>
-        &copy; 2025 VashgirdApp. Ҳамаи ҳуқуқҳо ҳифз шудаанд.
-    </footer>
+<main>
+  <div class="wrap">
+    <h2 data-t="our">Барномаҳои мо</h2>
+    <div class="grid" id="apps">
+      <noscript>
+        <div class="card"><div class="top"><h3>Мучал</h3></div>
+          <a class="btn main" href="https://play.google.com/store/apps/details?id=com.akmaljon.muchal">Google Play</a></div>
+        <div class="card"><div class="top"><h3>Шоҳнома</h3></div>
+          <a class="btn main" href="https://play.google.com/store/apps/details?id=com.shohnoma.app">Google Play</a></div>
+      </noscript>
+    </div>
+
+    <div class="contact">
+      <div><b data-t="contactTitle">Тамос бо мо</b><br><span style="color:var(--muted)" data-t="contactText">Савол ё пешниҳод доред? Ба мо нависед.</span></div>
+      <a class="btn main" href="mailto:vashgirdapp@gmail.com">vashgirdapp@gmail.com</a>
+    </div>
+  </div>
+</main>
+
+<footer>© <span id="year">2026</span> Vashgird App. <span data-t="rights">Ҳамаи ҳуқуқҳо ҳифз шудаанд.</span></footer>
+
+<script>
+// Рӯйхати барномаҳо аз apps/apps.json гирифта мешавад — ҳамон файле, ки барномаҳо низ мехонанд.
+const T = {
+  tg: { tagline: "Барномаҳо ва бозиҳои мобилӣ барои тамоми оила", our: "Барномаҳои мо", soon: "Ба зудӣ",
+        privacy: "Сиёсати махфият", contactTitle: "Тамос бо мо", contactText: "Савол ё пешниҳод доред? Ба мо нависед.",
+        rights: "Ҳамаи ҳуқуқҳо ҳифз шудаанд." },
+  ru: { tagline: "Мобильные приложения и игры для всей семьи", our: "Наши приложения", soon: "Скоро",
+        privacy: "Политика конфиденциальности", contactTitle: "Связаться с нами", contactText: "Есть вопрос или предложение? Напишите нам.",
+        rights: "Все права защищены." },
+  en: { tagline: "Mobile apps and games for the whole family", our: "Our apps", soon: "Coming soon",
+        privacy: "Privacy policy", contactTitle: "Contact us", contactText: "Have a question or an idea? Write to us.",
+        rights: "All rights reserved." }
+};
+let apps = [];
+let lang = (localStorage.getItem("lang") || (navigator.language || "tg").slice(0, 2));
+if (!T[lang]) lang = "tg";
+
+function pick(obj) { return obj ? (obj[lang] || obj.tg || obj.en || "") : ""; }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+function render() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el => el.textContent = T[lang][el.dataset.t]);
+  document.querySelectorAll(".langs button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
+  if (!apps.length) return;
+  document.getElementById("apps").innerHTML = apps.map(a => {
+    const play = "https://play.google.com/store/apps/details?id=" + encodeURIComponent(a.package);
+    return `<div class="card">
+      <div class="top">
+        <img class="icon" src="apps/${esc(a.icon)}" alt="${esc(pick(a.name))}" loading="lazy">
+        <div><h3>${esc(pick(a.name))}</h3>${a.soon ? `<span class="badge">${T[lang].soon}</span>` : ""}</div>
+      </div>
+      <p>${esc(pick(a.description))}</p>
+      <div class="actions">
+        <a class="btn main${a.soon ? " off" : ""}" href="${play}" target="_blank" rel="noopener">▶ Google Play</a>
+        ${a.privacy ? `<a class="btn ghost" href="${esc(a.privacy)}">${T[lang].privacy}</a>` : ""}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+  render();
+}));
+document.getElementById("year").textContent = new Date().getFullYear();
+
+fetch("apps/apps.json", { cache: "no-cache" })
+  .then(r => r.json())
+  .then(j => { apps = j.apps || []; render(); })
+  .catch(() => render());
+render();
+</script>
 </body>
 </html>
