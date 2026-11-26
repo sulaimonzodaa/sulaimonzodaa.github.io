@@ -23,7 +23,7 @@
     {
       "package": "com.akmaljon.diffspot",
       "name": { "tg": "DiffSpot", "ru": "DiffSpot", "en": "DiffSpot" },
-      "icon": "icons/diffspot.png",
+      "icon": "icons/diffspot_v2.webp",
       "soon": true,
       "description": {
         "tg": "Дар ду расми рангоранг тафовутҳоро ёбед.",
@@ -34,7 +34,7 @@
     {
       "package": "com.akmaljon.puzzle",
       "name": { "tg": "Пазл", "ru": "Пазл", "en": "Puzzle" },
-      "icon": "icons/puzzle.png",
+      "icon": "icons/puzzle_v2.webp",
       "soon": true,
       "description": {
         "tg": "Расмро аз қисмҳо ҷамъ кунед. Ҳар сатҳ ду вариант дорад: осон ва душвор.",

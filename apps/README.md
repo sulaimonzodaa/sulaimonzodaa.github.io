@@ -17,8 +17,8 @@ apps/
 ├── icons/           ← нишонаҳои барномаҳо
 │   ├── muchal.webp
 │   ├── shohnoma.webp
-│   ├── diffspot.png
-│   └── puzzle.png
+│   ├── diffspot_v2.webp
+│   └── puzzle_v2.webp
 └── README.md        ← ҳамин дастурамал
 ```
 
